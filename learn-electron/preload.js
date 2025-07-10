@@ -1,7 +1,7 @@
 /*
  * @Author       : 魏威
  * @Date         : 2025-06-30 14:20
- * @LastEditTime : 2025-07-11 06:57
+ * @LastEditTime : 2025-07-11 07:32
  * @LastEditors  : StarOne
  * @Description  :
  */
@@ -19,3 +19,5 @@ contextBridge.exposeInMainWorld("electron", {
   updateCounter: (callback) =>
     ipcRenderer.on("update-count", (_event, count) => callback(count))
 });
+
+contextBridge.exposeInMainWorld("require", require);

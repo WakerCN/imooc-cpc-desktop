@@ -1,7 +1,7 @@
 /*
  * @Author       : 魏威
  * @Date         : 2025-06-30 09:41
- * @LastEditTime : 2025-07-11 07:02
+ * @LastEditTime : 2025-07-11 07:33
  * @LastEditors  : StarOne
  * @Description  :
  */
@@ -12,14 +12,15 @@ const fs = require("fs");
 
 function createWindow() {
   const window = new BrowserWindow({
-    width: 850,
+    width: 1000,
     height: 600,
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, "preload.js")
     }
   });
   window.loadFile("index.html");
-  // window.webContents.openDevTools();
+  window.webContents.openDevTools();
   return window;
 }
 
