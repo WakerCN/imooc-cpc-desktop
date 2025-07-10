@@ -1,7 +1,7 @@
 /*
  * @Author       : 魏威
  * @Date         : 2025-06-30 14:20
- * @LastEditTime : 2025-06-30 15:15
+ * @LastEditTime : 2025-07-10 17:55
  * @LastEditors  : StarOne
  * @Description  :
  */
@@ -13,5 +13,6 @@ contextBridge.exposeInMainWorld("versions", {
 });
 
 contextBridge.exposeInMainWorld("electron", {
-  setTitle: (title) => ipcRenderer.send("setTitle", title)
+  setTitle: (title) => ipcRenderer.send("setTitle", title),
+  writeFile: (content) => ipcRenderer.invoke("writeFile", content)
 });

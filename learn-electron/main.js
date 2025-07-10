@@ -1,13 +1,14 @@
 /*
  * @Author       : 魏威
  * @Date         : 2025-06-30 09:41
- * @LastEditTime : 2025-07-06 06:58
+ * @LastEditTime : 2025-07-10 22:13
  * @LastEditors  : StarOne
  * @Description  :
  */
 
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
+const fs = require("fs");
 
 function createWindow() {
   const window = new BrowserWindow({
@@ -32,16 +33,17 @@ function createTestWindow(parent) {
 }
 
 function handleChangeTitle(event, title) {
-  console.log("%c 🍻 title", "font-size:16px;color:#666666;background:#C0EBD7", title);
-  console.log(
-    "%c 🎂 event",
-    "font-size:16px;color:#666666;background:#F8C28E",
-    event
-  );
   const webContents = event.sender;
   const win = BrowserWindow.fromWebContents(webContents);
   win.setTitle(title);
 }
+
+const handleWriteFile = async (event, filecontent) => {
+  fs.promises.writeFile("test.txt", filecontent);
+  const stat = await fs.promises.stat("test.txt");
+
+  return stat.size;
+};
 
 app.on("ready", () => {
   // const main = createWindow();
@@ -49,4 +51,5 @@ app.on("ready", () => {
 
   createWindow();
   ipcMain.on("setTitle", handleChangeTitle);
+  ipcMain.handle("writeFile", handleWriteFile);
 });

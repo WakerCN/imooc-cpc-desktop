@@ -16,3 +16,13 @@ btn.addEventListener("click", () => {
   const title = titleDom.value;
   window.electron.setTitle(title);
 });
+
+const fileContentInputDom = document.getElementById("fileContent");
+const writeBtn = document.getElementById("write-btn");
+const fileSizeDom = document.getElementById("fileSize");
+
+writeBtn.addEventListener("click", async () => {
+  const fileContent = fileContentInputDom.value;
+  const fileSize = await window.electron.writeFile(fileContent);
+  fileSizeDom.innerHTML = `File size: ${fileSize} bytes`;
+});
