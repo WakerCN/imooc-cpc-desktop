@@ -1,7 +1,7 @@
 /*
  * @Author       : 魏威
  * @Date         : 2025-06-30 09:41
- * @LastEditTime : 2025-07-10 22:13
+ * @LastEditTime : 2025-07-11 07:02
  * @LastEditors  : StarOne
  * @Description  :
  */
@@ -19,7 +19,8 @@ function createWindow() {
     }
   });
   window.loadFile("index.html");
-  window.webContents.openDevTools();
+  // window.webContents.openDevTools();
+  return window;
 }
 
 function createTestWindow(parent) {
@@ -39,7 +40,7 @@ function handleChangeTitle(event, title) {
 }
 
 const handleWriteFile = async (event, filecontent) => {
-  fs.promises.writeFile("test.txt", filecontent);
+  await fs.promises.writeFile("test.txt", filecontent);
   const stat = await fs.promises.stat("test.txt");
 
   return stat.size;
@@ -49,7 +50,16 @@ app.on("ready", () => {
   // const main = createWindow();
   // createTestWindow(main);
 
-  createWindow();
+  const win = createWindow();
   ipcMain.on("setTitle", handleChangeTitle);
   ipcMain.handle("writeFile", handleWriteFile);
+
+  // count Demo
+  let count = 0;
+  win.webContents.send("update-count", count);
+
+  setInterval(() => {
+    count += 3;
+    win.webContents.send("update-count", count);
+  }, 500);
 });

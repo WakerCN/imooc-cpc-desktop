@@ -1,7 +1,7 @@
 /*
  * @Author       : 魏威
  * @Date         : 2025-06-30 14:24
- * @LastEditTime : 2025-06-30 15:38
+ * @LastEditTime : 2025-07-11 06:59
  * @LastEditors  : StarOne
  * @Description  :
  */
@@ -25,4 +25,9 @@ writeBtn.addEventListener("click", async () => {
   const fileContent = fileContentInputDom.value;
   const fileSize = await window.electron.writeFile(fileContent);
   fileSizeDom.innerHTML = `File size: ${fileSize} bytes`;
+});
+
+const counterDom = document.getElementById("counter");
+window.electron.updateCounter((count) => {
+  counterDom.innerHTML = `Counter: ${count}`;
 });
