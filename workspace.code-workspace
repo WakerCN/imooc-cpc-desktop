@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "workspace",
+      "path": "."
+    },
+    {
+      "name": "learn-electron",
+      "path": "learn-electron"
+    }
+  ],
+  "settings": {}
+}
