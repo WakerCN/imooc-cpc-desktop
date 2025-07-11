@@ -1,7 +1,7 @@
 /*
  * @Author       : 魏威
  * @Date         : 2025-06-30 09:41
- * @LastEditTime : 2025-07-11 07:33
+ * @LastEditTime : 2025-07-11 08:01
  * @LastEditors  : StarOne
  * @Description  :
  */
@@ -9,6 +9,9 @@
 const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const fs = require("fs");
+
+const remote = require("@electron/remote/main");
+remote.initialize();
 
 function createWindow() {
   const window = new BrowserWindow({
@@ -52,6 +55,7 @@ app.on("ready", () => {
   // createTestWindow(main);
 
   const win = createWindow();
+  remote.enable(win.webContents);
   ipcMain.on("setTitle", handleChangeTitle);
   ipcMain.handle("writeFile", handleWriteFile);
 
