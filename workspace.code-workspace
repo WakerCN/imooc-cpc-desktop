@@ -7,6 +7,10 @@
     {
       "name": "learn-electron",
       "path": "learn-electron"
+    },
+    {
+      "name": "cross-platform-chat",
+      "path": "cross-platform-chat"
     }
   ],
   "settings": {}
