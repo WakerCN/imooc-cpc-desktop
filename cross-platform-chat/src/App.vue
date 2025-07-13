@@ -4,13 +4,15 @@
       <ConversationList :items="ConversationListMockData" />
       <div class="grid h-[60px] grid-cols-2 gap-2 p-2">
         <button
-          class="inline-block h-[100%] flex-1 rounded-[4px] border border-green-700 bg-green-700 p-1 text-white shadow-sm hover:bg-green-700/90"
+          class="inline-flex h-[100%] items-center justify-center gap-1 rounded-[4px] border border-green-700 bg-green-700 p-1 text-white shadow-sm hover:bg-green-700/90"
         >
+          <Icon icon="material-symbols:chat-add-on-rounded" width="24" height="24" />
           新建聊天
         </button>
         <button
-          class="inline-block h-[100%] flex-1 rounded-[4px] border border-green-700 bg-green-50 p-1 text-green-700 shadow-sm hover:bg-green-700/90 hover:text-white"
+          class="inline-flex h-[100%] items-center justify-center gap-1 rounded-[4px] border border-green-700 bg-green-50 p-1 text-green-700 shadow-sm hover:bg-green-700/90 hover:text-white"
         >
+          <Icon icon="material-symbols:settings" width="24" height="24" />
           应用设置
         </button>
       </div>
@@ -22,4 +24,5 @@
 <script setup>
 import ConversationList from "./components/ConversationList.vue";
 import { ConversationListMockData } from "./data/mockData";
+import { Icon } from "@iconify/vue";
 </script>
