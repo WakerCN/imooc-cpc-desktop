@@ -1,9 +1,21 @@
 <template>
-  <div class="flex items-center justify-between h-screen">
-    <div class="w-[300px] h-full bg-gray-300 text-gray-700 hover:bg-yellow-300">
+  <div class="flex h-screen items-center justify-between">
+    <div class="h-full w-[300px] bg-gray-300 text-gray-700">
       <ConversationList :items="ConversationListMockData" />
+      <div class="grid h-[60px] grid-cols-2 gap-2 p-2">
+        <button
+          class="inline-block h-[100%] flex-1 rounded-[4px] border border-green-700 bg-green-700 p-1 text-white shadow-sm hover:bg-green-700/90"
+        >
+          新建聊天
+        </button>
+        <button
+          class="inline-block h-[100%] flex-1 rounded-[4px] border border-green-700 bg-green-50 p-1 text-green-700 shadow-sm hover:bg-green-700/90 hover:text-white"
+        >
+          应用设置
+        </button>
+      </div>
     </div>
-    <div class="bg-cyan-300 text-cyan-700 flex-1 h-full">content</div>
+    <div class="h-full flex-1 bg-cyan-300 text-cyan-700">content</div>
   </div>
 </template>
 
