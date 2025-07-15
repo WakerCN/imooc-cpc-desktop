@@ -1,4 +1,4 @@
-import { ConversationProps } from "../../src/types";
+import { ConversationProps, ProviderProps } from "../../src/types";
 
 export const ConversationListMockData: ConversationProps[] = [
   {
@@ -7,7 +7,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "GPT-4",
     createdAt: "2023-10-15 09:30:00",
     updatedAt: "2023-10-15 11:45:00",
-    providerId: 1
+    providerId: 1,
   },
   {
     id: "c2",
@@ -15,7 +15,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "Claude 2",
     createdAt: "2023-10-16 14:15:00",
     updatedAt: "2023-10-16 16:30:00",
-    providerId: 2
+    providerId: 2,
   },
   {
     id: "c3",
@@ -23,7 +23,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "Gemini Pro",
     createdAt: "2023-10-17 10:00:00",
     updatedAt: "2023-10-17 12:15:00",
-    providerId: 4
+    providerId: 4,
   },
   {
     id: "c4",
@@ -31,7 +31,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "Llama 3",
     createdAt: "2023-10-18 09:45:00",
     updatedAt: "2023-10-18 11:00:00",
-    providerId: 3
+    providerId: 3,
   },
   {
     id: "c5",
@@ -39,7 +39,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "Claude Instant",
     createdAt: "2023-10-19 15:30:00",
     updatedAt: "2023-10-19 17:45:00",
-    providerId: 2
+    providerId: 2,
   },
   {
     id: "c6",
@@ -47,7 +47,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "GPT-4 Turbo",
     createdAt: "2023-10-20 11:15:00",
     updatedAt: "2023-10-20 13:30:00",
-    providerId: 1
+    providerId: 1,
   },
   {
     id: "c7",
@@ -55,7 +55,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "Llama 3",
     createdAt: "2023-10-18 09:45:00",
     updatedAt: "2023-10-18 11:00:00",
-    providerId: 3
+    providerId: 3,
   },
   {
     id: "c8",
@@ -63,7 +63,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "Claude Instant",
     createdAt: "2023-10-19 15:30:00",
     updatedAt: "2023-10-19 17:45:00",
-    providerId: 2
+    providerId: 2,
   },
   {
     id: "c9",
@@ -71,7 +71,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "GPT-4 Turbo",
     createdAt: "2023-10-20 11:15:00",
     updatedAt: "2023-10-20 13:30:00",
-    providerId: 1
+    providerId: 1,
   },
   {
     id: "c10",
@@ -79,7 +79,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "Llama 3",
     createdAt: "2023-10-18 09:45:00",
     updatedAt: "2023-10-18 11:00:00",
-    providerId: 3
+    providerId: 3,
   },
   {
     id: "c11",
@@ -87,7 +87,7 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "Claude Instant",
     createdAt: "2023-10-19 15:30:00",
     updatedAt: "2023-10-19 17:45:00",
-    providerId: 2
+    providerId: 2,
   },
   {
     id: "c12",
@@ -95,6 +95,27 @@ export const ConversationListMockData: ConversationProps[] = [
     selectedModel: "GPT-4 Turbo",
     createdAt: "2023-10-20 11:15:00",
     updatedAt: "2023-10-20 13:30:00",
-    providerId: 1
-  }
+    providerId: 1,
+  },
+];
+
+export const ProviderListMockData: ProviderProps[] = [
+  {
+    id: 1,
+    name: "文心一言",
+    desc: "文心一言 百度出品的大模型",
+    models: ["ERNIE-4.0-8K", "ERNIE-3.5-8K", "ERNIE-Speed-8K"],
+    avatar: "https://darwickmarine.com/assets/company-logo-BeflVPkN.png",
+    createdAt: "2024-07-03",
+    updatedAt: "2024-07-03",
+  },
+  {
+    id: 2,
+    name: "通义千问",
+    desc: "通义千问 阿里出品的大模型",
+    models: ["qwen-turbo", "qwen-plus", "qwen-max"],
+    avatar: "https://darwickmarine.com/assets/company-logo-BeflVPkN.png",
+    createdAt: "2024-07-03",
+    updatedAt: "2024-07-03",
+  },
 ];

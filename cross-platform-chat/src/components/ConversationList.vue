@@ -5,13 +5,15 @@
       v-for="item in items"
       :key="item.id"
     >
-      <div class="flex select-none items-center justify-between text-sm leading-5">
-        <span>{{ item.selectedModel }}</span>
-        <span>{{ item.createdAt }}</span>
-      </div>
-      <h2 class="truncate font-semibold leading-6 text-gray-900">
-        {{ item.title }}
-      </h2>
+      <RouterLink :to="`/conversation/${item.id}`">
+        <div class="flex select-none items-center justify-between text-sm leading-5">
+          <span>{{ item.selectedModel }}</span>
+          <span>{{ item.createdAt }}</span>
+        </div>
+        <h2 class="truncate font-semibold leading-6 text-gray-900">
+          {{ item.title }}
+        </h2>
+      </RouterLink>
     </div>
   </div>
 </template>

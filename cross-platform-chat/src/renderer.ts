@@ -1,7 +1,7 @@
 /*
  * @Author       : 魏威
  * @Date         : 2025-07-11 11:55
- * @LastEditTime : 2025-07-11 17:19
+ * @LastEditTime : 2025-07-13 17:01
  * @LastEditors  : StarOne
  * @Description  :
  */
@@ -33,12 +33,11 @@
  *  });
  * ```
  */
-console.log(
-  '👋 This message is being logged by "renderer.ts", included via Vite'
-);
+
 import "./index.css";
 
 import { createApp } from "vue";
 import App from "./App.vue";
+import router from "./routers";
 
-createApp(App).mount("#app");
+createApp(App).use(router).mount("#app");
