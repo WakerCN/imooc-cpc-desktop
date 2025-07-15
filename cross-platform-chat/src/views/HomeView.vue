@@ -9,10 +9,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import ProviderList from "../components/ProviderList.vue";
 import MessageInput from "../components/MessageInput.vue";
 import { ProviderListMockData } from "../data/mockData";
+import { ref } from "vue";
+
+const selectedModel = ref("");
 </script>
 
 <style></style>

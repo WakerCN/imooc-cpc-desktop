@@ -1,6 +1,6 @@
 <template>
   <div
-    class="message-input mb-5 flex h-full w-full rounded-lg border border-gray-300 p-2 transition-all duration-300
+    class="message-input flex w-full mb-5 h-full rounded-lg border border-gray-300 p-2 transition-all duration-300
       hover:border-green-700"
   >
     <input type="text" class="flex-1 outline-none" v-model="inputText" />

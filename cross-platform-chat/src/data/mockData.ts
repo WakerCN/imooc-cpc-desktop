@@ -1,4 +1,4 @@
-import { ConversationProps, ProviderProps } from "../../src/types";
+import { ConversationProps, MessageProps, ProviderProps } from "../../src/types";
 
 export const ConversationListMockData: ConversationProps[] = [
   {
@@ -117,5 +117,99 @@ export const ProviderListMockData: ProviderProps[] = [
     avatar: "https://darwickmarine.com/assets/company-logo-BeflVPkN.png",
     createdAt: "2024-07-03",
     updatedAt: "2024-07-03",
+  },
+];
+
+export const messageList: MessageProps[] = [
+  {
+    id: "msg-1",
+    conversationId: "conv-1",
+    content: "什么是TypeScript？",
+    type: "question",
+    status: "finished",
+    createdAt: "2023-07-10 08:30:00",
+    updatedAt: "2023-07-10 08:30:00",
+  },
+  {
+    id: "msg-2",
+    conversationId: "conv-1",
+    content: "TypeScript是JavaScript的超集，添加了静态类型检查。",
+    type: "answer",
+    status: "finished",
+    createdAt: "2023-07-10 08:31:20",
+    updatedAt: "2023-07-10 08:31:20",
+  },
+  {
+    id: "msg-3",
+    conversationId: "conv-1",
+    content: "TypeScript相比JavaScript有什么优势？",
+    type: "question",
+    status: "finished",
+    createdAt: "2023-07-10 08:32:15",
+    updatedAt: "2023-07-10 08:32:15",
+  },
+  {
+    id: "msg-4",
+    conversationId: "conv-1",
+    content: "主要优势包括静态类型检查、更好的IDE支持和代码可维护性。",
+    type: "answer",
+    status: "finished",
+    createdAt: "2023-07-10 08:33:40",
+    updatedAt: "2023-07-10 08:33:40",
+  },
+  {
+    id: "msg-5",
+    conversationId: "conv-1",
+    content: "如何安装TypeScript？",
+    type: "question",
+    status: "finished",
+    createdAt: "2023-07-10 08:34:25",
+    updatedAt: "2023-07-10 08:34:25",
+  },
+  {
+    id: "msg-6",
+    conversationId: "conv-1",
+    content: "可以使用npm或yarn安装：npm install -g typescript",
+    type: "answer",
+    status: "streaming",
+    createdAt: "2023-07-10 08:35:10",
+    updatedAt: "2023-07-10 08:35:12",
+  },
+  {
+    id: "msg-7",
+    conversationId: "conv-1",
+    content: "TypeScript配置文件是什么？",
+    type: "question",
+    status: "finished",
+    createdAt: "2023-07-10 08:36:05",
+    updatedAt: "2023-07-10 08:36:05",
+  },
+  {
+    id: "msg-8",
+    conversationId: "conv-1",
+    content:
+      "TypeScript使用tsconfig.json作为配置文件，用于指定编译选项。TypeScript使用tsconfig.json作为配置文件，用于指定编译选项。TypeScript使用tsconfig.json作为配置文件，用于指定编译选项。",
+    type: "answer",
+    status: "finished",
+    createdAt: "2023-07-10 08:37:30",
+    updatedAt: "2023-07-10 08:37:30",
+  },
+  {
+    id: "msg-9",
+    conversationId: "conv-1",
+    content: "如何将TypeScript编译为JavaScript？",
+    type: "question",
+    status: "finished",
+    createdAt: "2023-07-10 08:38:15",
+    updatedAt: "2023-07-10 08:38:15",
+  },
+  {
+    id: "msg-10",
+    conversationId: "conv-1",
+    content: "",
+    type: "answer",
+    status: "loading",
+    createdAt: "2023-07-10 08:39:00",
+    updatedAt: "2023-07-10 08:39:00",
   },
 ];
